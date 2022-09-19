@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { of, Subject } from 'rxjs';
 import { NgxSubscribeDirective } from './ngx-subscribe.directive';
 
@@ -19,7 +19,7 @@ function setupComponent<T>(component: new(...args: any[]) => T, targetSelector: 
 }
 
 describe('ngxSubscribe', () => {
-    it('subscribes to the observable and shows the emitted value', async(() => {
+    it('subscribes to the observable and shows the emitted value', waitForAsync(() => {
         @Component({
             template: `<div *ngxSubscribe="let value of source$">{{ value }}</div>`,
         })
@@ -27,11 +27,11 @@ describe('ngxSubscribe', () => {
             public source$ = of(42);
         }
 
-        const [fixture, getTarget] = setupComponent(TestComponent, 'div');
+        const [, getTarget] = setupComponent(TestComponent, 'div');
         expect(getTarget().textContent).toBe('42');
     }));
 
-    it('updates as more values emit', async(() => {
+    it('updates as more values emit', waitForAsync(() => {
         @Component({
             template: `<div *ngxSubscribe="let value of source$">{{ value }}</div>`,
         })
@@ -49,7 +49,7 @@ describe('ngxSubscribe', () => {
         });
     }));
 
-    it('counts the number of emitted values', async(async () => {
+    it('counts the number of emitted values', waitForAsync(async () => {
         @Component({
             template: `<div *ngxSubscribe="source$; let count = count">{{ count }}</div>`,
         })
@@ -67,7 +67,7 @@ describe('ngxSubscribe', () => {
         });
     }));
 
-    it('contains information about the error of the observable', async(async () => {
+    it('contains information about the error of the observable', waitForAsync(async () => {
         @Component({
             template: `
                 <div *ngxSubscribe="source$; let errored = errored; let error = error">
@@ -87,7 +87,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent.trim()).toBe('true | 42');
     }));
 
-    it('contains information about the completion of the observable', async(async () => {
+    it('contains information about the completion of the observable', waitForAsync(async () => {
         @Component({
             template: `
                 <div *ngxSubscribe="source$; let completed = completed">
@@ -107,7 +107,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent.trim()).toBe('true');
     }));
 
-    it('can display a different template', async(async () => {
+    it('can display a different template', waitForAsync(async () => {
         @Component({
             template: `
                 <div>
@@ -128,7 +128,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent).toBe('42');
     }));
 
-    it('can display a different template if no value has been emitted yet', async(async () => {
+    it('can display a different template if no value has been emitted yet', waitForAsync(async () => {
         @Component({
             template: `
                 <div>
@@ -149,7 +149,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent).toBe('');
     }));
 
-    it('can display a different template if an error occurred', async(async () => {
+    it('can display a different template if an error occurred', waitForAsync(async () => {
         @Component({
             template: `
                 <div>
@@ -170,7 +170,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent).toBe('Error');
     }));
 
-    it('can display a different template if the observable completed', async(async () => {
+    it('can display a different template if the observable completed', waitForAsync(async () => {
         @Component({
             template: `
                 <div>
@@ -191,7 +191,7 @@ describe('ngxSubscribe', () => {
         expect(getTarget().textContent).toBe('Completed');
     }));
 
-    it('resubscribes if the observable changes', async(async () => {
+    it('resubscribes if the observable changes', waitForAsync(async () => {
         @Component({
             template: `
                 <div *ngxSubscribe="let value of source$; let count = count; let errored = errored; let error = error">
