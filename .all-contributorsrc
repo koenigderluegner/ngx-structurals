@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "KoenigDerLuegner",
+      "name": "Alexander Niersmann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25096024?v=4",
+      "profile": "https://github.com/KoenigDerLuegner",
+      "contributions": [
+        "code"
+      ]
+    },
+      {
       "login": "Airblader",
       "name": "Ingo Bürk",
       "avatar_url": "https://avatars3.githubusercontent.com/u/2392216?v=4",
@@ -36,7 +45,7 @@
   ],
   "contributorsPerLine": 7,
   "projectName": "ngx-structurals",
-  "projectOwner": "TNG",
+  "projectOwner": "KoenigDerLuegner",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true

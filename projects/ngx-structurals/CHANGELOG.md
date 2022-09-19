@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+
+# [2.0.0](https://github.com/koenigderluegner/ngx-structurals/compare/@tngtech/ngx-structurals@1.2.2...@koenigderluegner/ngx-structurals@2.0.0) (2020-01-24)
+
+
+### Features
+
+* support Angular 13 
+
+### BREAKING CHANGES
+
+* Angular 13 is now required.
+
+
+
 ## [1.2.2](https://github.com/TNG/ngx-structurals/compare/@tngtech/ngx-structurals@1.2.1...@tngtech/ngx-structurals@1.2.2) (2021-08-13)
 
 **Note:** Version bump only for package @tngtech/ngx-structurals

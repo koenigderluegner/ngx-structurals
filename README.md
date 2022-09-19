@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/TNG/ngx-structurals.svg?branch=master)](https://travis-ci.com/TNG/ngx-structurals)
+[![Build Status](https://travis-ci.com/koenigderluegner/ngx-structurals.svg?branch=master)](https://travis-ci.com/koenigderluegner/ngx-structurals)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg)](https://conventionalcommits.org)
 
@@ -16,8 +16,8 @@ which may be useful in any Angular project.
 Simply install ngx-structurals with the package manager of your choice:
 
 ```
-npm install --save @tngtech/ngx-structurals
-yarn add @tngtech/ngx-structurals
+npm install --save @koenigderluegner/ngx-structurals
+yarn add @koenigderluegner/ngx-structurals
 ```
 
 You can now import `NgxStructuralsModule` into your application to get access to the directives.
@@ -149,4 +149,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 [MIT License][license]
 
-[license]: https://www.github.com/TNG/ngx-structurals/blob/master/LICENSE
+[license]: https://www.github.com/koenigderluegner/ngx-structurals/blob/master/LICENSE
