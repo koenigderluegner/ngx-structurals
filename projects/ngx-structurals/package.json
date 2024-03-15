@@ -1,6 +1,6 @@
 {
   "name": "@koenigderluegner/ngx-structurals",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Structural utility directives for Angular",
   "homepage": "https://github.com/koenigderluegner/ngx-structurals",
   "author": "Alexander Niersmann",
